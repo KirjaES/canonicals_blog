@@ -9,8 +9,17 @@
   align-items: center;
   flex-shrink: 0;
   border-right: 1px;
-  background-color: #000;
+  background-color: var(--black, #000);
   transition: transform 0.5s ease;
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--sunny, #FFC802FF);
+	}
+
+	&:active {
+		background-color: var(--gray-disabled, #787878FF);
+	}
 }
 
 .container_open {
