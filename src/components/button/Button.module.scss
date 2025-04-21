@@ -1,14 +1,14 @@
 .button {
-	cursor: pointer;
 	display: flex;
-	width: 210px;
-	height: 50px;
 	justify-content: center;
 	align-items: center;
-	text-align: center;
 	box-sizing: border-box;
-	border: 1px solid var(--black, #000);
+	width: 210px;
+	height: 50px;
+	text-align: center;
 	background-color: var(--sunny, #ffc802);
+	border: 1px solid var(--black, #000000);
+	cursor: pointer;
 
 	&:hover {
 		background-color: var(--yellow-hover, #ffedabff);
@@ -16,11 +16,11 @@
 }
 
 .button[type='reset'] {
-	--font-color: var(--black, #000);
-	background-color: var(--white, #fff);
+	--font-color: var(--black, #000000);
+	background-color: var(--white, #ffffff);
 
 	&:hover {
-		--font-color: var(--white, #fff);
-		background-color: var(--black, #000);
+		--font-color: var(--white, #ffffff);
+		background-color: var(--black, #000000);
 	}
 }

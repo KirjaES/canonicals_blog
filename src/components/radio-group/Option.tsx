@@ -33,10 +33,13 @@ export const Option = (props: OptionProps) => {
 			data-checked={isChecked}
 			data-testid={inputId}
 			tabIndex={0}
+			role='radio'
+			aria-checked={isChecked}
 			ref={optionRef}>
 			<input
 				className={styles.input}
 				type='radio'
+				checked={isChecked}
 				name={groupName}
 				id={inputId}
 				value={value}

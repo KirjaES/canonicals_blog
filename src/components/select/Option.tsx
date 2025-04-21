@@ -36,7 +36,9 @@ export const Option = (props: OptionProps) => {
 		<li
 			className={clsx(styles.option, styles[optionClassName || ''])}
 			value={value}
-			onClick={handleClick(value)}
+			onMouseDown={handleClick(value)}
+			role='option'
+			aria-selected={false}
 			tabIndex={0}
 			data-testid={`select-option-${value}`}
 			ref={optionRef}>

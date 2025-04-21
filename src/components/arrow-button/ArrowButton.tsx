@@ -21,7 +21,8 @@ export const ArrowButton = ({ onClick, isContainerOpen }: ArrowButtonProps) => {
 			className={clsx(styles.container, {
 				[styles.container_open]: isContainerOpen,
 			})}
-			onClick={onClick}>
+			onClick={onClick}
+			onKeyDown={onClick}>
 			<img
 				src={arrow}
 				alt='иконка стрелочки'

@@ -9,7 +9,11 @@ module.exports = {
 		react: {
 			version: 'detect',
 		},
+		'import/resolver': {
+			typescript: {},
+		},
 	},
+	plugins: ['@typescript-eslint', 'import'],
 	extends: [
 		'plugin:@typescript-eslint/recommended',
 		'plugin:prettier/recommended',
@@ -32,5 +36,6 @@ module.exports = {
 		'react/jsx-uses-react': 'off',
 		'react/react-in-jsx-scope': 'off',
 		'@typescript-eslint/explicit-module-boundary-types': 'off',
+		'react/no-unescaped-entities': 'off',
 	},
 };

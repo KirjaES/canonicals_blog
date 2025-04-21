@@ -25,9 +25,11 @@ type Text = {
 	family?: FontFamiliesClasses;
 	/** Булевая пропса, делает динамическим только семью шрифтов и цвет */
 	dynamicLite?: boolean;
+	/** Булевая пропса, делает динамическим только цвет */
+	dynamicColor?: boolean;
 };
 
-export const Text = ({
+const _Text = ({
 	children,
 	as: Tag = 'div',
 	size = 18,
@@ -38,6 +40,7 @@ export const Text = ({
 	align = 'left',
 	family = 'open-sans',
 	dynamicLite = false,
+	dynamicColor = false,
 }: Text) => {
 	const className = clsx(
 		styles.text,
@@ -48,7 +51,11 @@ export const Text = ({
 		{ [styles.uppercase]: uppercase },
 		styles[`${align}`],
 		styles[`${family}`],
-		{ [styles.dynamicLite]: dynamicLite }
+		{ [styles.dynamicLite]: dynamicLite },
+		{ [styles.dynamicColor]: dynamicColor }
 	);
 	return <Tag className={className}>{children}</Tag>;
 };
+
+// eslint не видит import text
+export const Text = _Text;

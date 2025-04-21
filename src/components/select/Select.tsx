@@ -74,7 +74,7 @@ export const Select = (props: SelectProps) => {
 					)}
 					data-status={status}
 					data-selected={!!selected?.value}
-					onClick={handlePlaceHolderClick}
+					onMouseDown={handlePlaceHolderClick}
 					role='button'
 					tabIndex={0}
 					ref={placeholderRef}>

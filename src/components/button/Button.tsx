@@ -13,7 +13,7 @@ export const Button = ({
 }) => {
 	return (
 		<button className={styles.button} type={type} onClick={onClick}>
-			<Text weight={800} uppercase dynamicLite={type === 'reset'}>
+			<Text weight={800} uppercase dynamicColor={type === 'reset'}>
 				{title}
 			</Text>
 		</button>
